@@ -490,7 +490,7 @@ public class DefaultHttpProxyServer implements HttpProxyServer {
         }
     }
 
-    private HttpProxyServer start() {
+    public HttpProxyServer start() {
         if (!serverGroup.isStopped()) {
             LOG.info("Starting proxy at address: " + this.requestedAddress);
 
@@ -886,7 +886,7 @@ public class DefaultHttpProxyServer implements HttpProxyServer {
             return this;
         }
 
-        private DefaultHttpProxyServer build() {
+        public DefaultHttpProxyServer build() {
             final ServerGroup serverGroup;
 
             if (this.serverGroup != null) {
